@@ -148,16 +148,16 @@ if ( ! function_exists( 'storefront_credit' ) ) {
 			$separator = '<span role="separator" aria-hidden="true"></span>';
 			$links_output = get_the_privacy_policy_link( '', ( ! empty( $links_output ) ? $separator : '' ) ) . $links_output;
 		}
-		
+
 		$links_output = apply_filters( 'storefront_credit_links_output', $links_output );
 		?>
 		<div class="site-info">
 			<?php echo esc_html( apply_filters( 'storefront_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . date( 'Y' ) ) ); ?>
 
-			<?php if ( ! empty( $links_output ) ) { ?>
-				<br />
-				<?php echo wp_kses_post( $links_output ); ?>
-			<?php } ?>
+<!--			--><?php //if ( ! empty( $links_output ) ) { ?>
+<!--				<br />-->
+<!--				--><?php //echo wp_kses_post( $links_output ); ?>
+<!--			--><?php //} ?>
 		</div><!-- .site-info -->
 		<?php
 	}
